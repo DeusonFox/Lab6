@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcLibrary", "CalcLibrary\CalcLibrary.csproj", "{9949535D-F386-4144-8197-EC1BB27FA870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcTest", "CalcTest\CalcTest.csproj", "{3FBCEA74-CAED-4B01-8B60-9CC2147BE7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcWPF", "CalcWPF\CalcWPF.csproj", "{40C0D818-4FE9-4004-AD4C-844F9844959D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9949535D-F386-4144-8197-EC1BB27FA870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9949535D-F386-4144-8197-EC1BB27FA870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9949535D-F386-4144-8197-EC1BB27FA870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9949535D-F386-4144-8197-EC1BB27FA870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBCEA74-CAED-4B01-8B60-9CC2147BE7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBCEA74-CAED-4B01-8B60-9CC2147BE7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBCEA74-CAED-4B01-8B60-9CC2147BE7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBCEA74-CAED-4B01-8B60-9CC2147BE7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C0D818-4FE9-4004-AD4C-844F9844959D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C0D818-4FE9-4004-AD4C-844F9844959D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C0D818-4FE9-4004-AD4C-844F9844959D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C0D818-4FE9-4004-AD4C-844F9844959D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0F73FA0-E8A3-4E6F-98C5-26594F885185}
+	EndGlobalSection
+EndGlobal
