@@ -139,15 +139,13 @@ namespace CalcWPF
                         else
                         {
                             MessageBox.Show("Ноль не может быть отрицательным!");
-                            leftop = rightop = "";
-                            textBlock.Text = "0";
+                            Clear();
                         }
                     }
                     catch
                     {
                         MessageBox.Show("Для смены знака, сначала введите число!");
-                        leftop = rightop = "";
-                        textBlock.Text = "0";
+                        Clear();
                     }
                 }
                 else if (s == "1/x")
@@ -175,9 +173,9 @@ namespace CalcWPF
                     try
                     {
                         double n = double.Parse(leftop);
-                        int digit = 1;
-                        for (int i = 2; i <= n; i++) digit *= i;
-                        if (digit < int.MaxValue) leftop = digit.ToString();
+                        int factorial = 1;
+                        for (int i = 2; i <= n; i++) factorial *= i;
+                        if (factorial < int.MaxValue) leftop = factorial.ToString();
                         textBlock.Text = leftop;
                     }
                     catch
@@ -217,15 +215,13 @@ namespace CalcWPF
                         if (rightop == "")
                         {
                             int n = int.Parse(leftop);
-                            int digit = n * n;
-                            if (digit < int.MaxValue) leftop = digit.ToString();
+                            if (n * n < int.MaxValue) leftop = (n * n).ToString();
                             textBlock.Text = leftop;
                         }
                         else
                         {
                             int n = int.Parse(rightop);
-                            int digit = n * n;
-                            if (digit < int.MaxValue) rightop = digit.ToString();
+                            if (n * n < int.MaxValue) rightop = (n * n).ToString();
                             textBlock.Text = rightop;
                         }
                     }
@@ -361,7 +357,7 @@ namespace CalcWPF
                     break;
                 case "*": rightop = (num1 * num2).ToString();
                     break;
-                case "/": if (rightop != "0" || num2 != 0) rightop = (num1 / num2).ToString();
+                case "/": if (rightop != "0") rightop = (num1 / num2).ToString();
                     else
                     {
                         MessageBox.Show("На ноль делить нельзя");
