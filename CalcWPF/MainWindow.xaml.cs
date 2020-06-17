@@ -163,8 +163,7 @@ namespace CalcWPF
                     catch
                     {
                         MessageBox.Show("Введите число!");
-                        leftop = rightop = "";
-                        textBlock.Text = "0";
+                        Clear();
                     }
                 }
                 else if (s == "x!")
@@ -204,7 +203,7 @@ namespace CalcWPF
                     catch
                     {
                         MessageBox.Show("Сначала введите число из которого хотите извлечь корень!");
-                        textBlock.Text = "0";
+                        Clear();
                     }
                 }
                 else if (s == "x^2")
@@ -228,7 +227,7 @@ namespace CalcWPF
                     catch
                     {
                         MessageBox.Show("Сначала введите число, которое хотите возвести в квадрат!");
-                        textBlock.Text = "0";
+                        Clear();
                     }
                 }
                 else if (s == "sin")
