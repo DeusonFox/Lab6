@@ -50,7 +50,7 @@ namespace CalcWPF
             textBlock.Text += s;
             int num;
             bool result = int.TryParse(s, out num);
-            if (leftop == "" && (s == "+" || s == "-" || s == "*" || s == "/" || s == "^" || s == "div" || s == "mod"))
+            if (leftop == "" && (s == "=" || s == "1/x" || s == "x!" || s == "√" || s == "x^2" || s == "sin" || s == "cos" || s == "tan" || s == "e^x" || s == "+" || s == "-" || s == "*" || s == "/" || s == "div" || s == "mod" || s == "^" ))
             {
                 MessageBox.Show("Сначала введите число!");
                 Clear();
@@ -66,7 +66,6 @@ namespace CalcWPF
                 {
                     if (leftop == "" || rightop == "")
                     {
-                        MessageBox.Show("Введите другую операцию!");
                         Clear();
                     }
                     else
@@ -162,7 +161,6 @@ namespace CalcWPF
                     }
                     catch
                     {
-                        MessageBox.Show("Введите число!");
                         Clear();
                     }
                 }
@@ -179,7 +177,6 @@ namespace CalcWPF
                     }
                     catch
                     {
-                        MessageBox.Show("Сначала введите число факториала");
                         textBlock.Text = "0";
                     }
                 }
@@ -202,7 +199,6 @@ namespace CalcWPF
                     }
                     catch
                     {
-                        MessageBox.Show("Сначала введите число из которого хотите извлечь корень!");
                         Clear();
                     }
                 }
@@ -226,7 +222,6 @@ namespace CalcWPF
                     }
                     catch
                     {
-                        MessageBox.Show("Сначала введите число, которое хотите возвести в квадрат!");
                         Clear();
                     }
                 }
@@ -243,7 +238,6 @@ namespace CalcWPF
                     {
                         if (leftop == "" || leftop == "0")
                         {
-                            MessageBox.Show("Сначала введите число!");
                             Clear();
                         }
                     }
@@ -260,7 +254,6 @@ namespace CalcWPF
                     {
                         if (leftop == "" || leftop == "0")
                         {
-                            MessageBox.Show("Сначала введите число!");
                             Clear();
                         }
                     }
@@ -278,7 +271,6 @@ namespace CalcWPF
                     {
                         if (leftop == "" || leftop == "0")
                         {
-                            MessageBox.Show("Сначала введите число!");
                             Clear();
                         }
                     }
@@ -309,7 +301,6 @@ namespace CalcWPF
                     {
                         if (leftop == "" || leftop == "0")
                         {
-                            MessageBox.Show("Сначала введите степень, в которую хотите возвести e!");
                             Clear();
                         }
                     }
