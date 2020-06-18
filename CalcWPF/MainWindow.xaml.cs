@@ -59,6 +59,32 @@ namespace CalcWPF
             {
                 if (operation == "") leftop += s;
                 else rightop += s;
+                if (leftop == "00" && leftop.Length == 2)
+                {
+                    string ss = leftop.Trim('0');
+                    leftop = 0 + ss;
+                    textBlock.Text = leftop;
+                }
+                else if (leftop.Length == 2)
+                {
+                    string ss = leftop.Trim('0');
+                    leftop = ss;
+                    textBlock.Text = leftop;
+                }
+                //else textBlock.Text = leftop;
+                if (rightop == "00" && rightop.Length == 2)
+                {
+                    string ss = rightop.Trim('0');
+                    rightop = 0 + ss;
+                    textBlock.Text = leftop + operation + rightop;
+                }
+                else if (rightop.Length == 2)
+                {
+                    string ss = rightop.Trim('0');
+                    rightop = ss;
+                    textBlock.Text = leftop + operation + rightop;
+                }
+                else textBlock.Text = leftop + operation + rightop;
             }
             else
             {
@@ -157,6 +183,11 @@ namespace CalcWPF
                         {
                             leftop = Math.Pow(n, -1).ToString();
                             textBlock.Text = leftop;
+                        }
+                        else
+                        {
+                            MessageBox.Show("На ноль делить нельзя");
+                            Clear();
                         }
                     }
                     catch
